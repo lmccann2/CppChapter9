@@ -1,0 +1,29 @@
+//************************************
+//.cpp
+//Levi McCann
+//Sting Output using & operator
+//CIS61 Hendrickson
+//04/08/2020
+//************************************
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+int main()
+
+ {
+    string name= "Hello ! ";
+    name.size();
+    char name2[9] = {'H','e','l','l','o', ' ','!', ' ','\0'};
+    
+    //diplay name and char
+    std::cout<<name << "  " <<name2 <<"  "<<std::endl; // only need std:: if you do not have namespace std above
+    cout<<"The meomory address is: "<<endl;
+    cout<<&name <<endl;
+    cout <<"The size is: " <<name.size() <<" bytes." <<endl;
+    cout<<"The value of 'name' is " <<name <<endl;
+    
+    cin.get();
+return 0;
+}
