@@ -1,0 +1,64 @@
+//*******************************
+//.cpp
+//Levi McCann
+//Oldest hockey player
+//CIS61 Hendrickson
+//04/08/2020
+//********************************
+
+
+
+#include <string>
+#include <cmath>  
+#include <iostream>
+using namespace std;
+
+//prototype two functions
+void printArray(int array[], int size);
+
+int main()
+ {
+   const int NUMPlayers = 10;
+   int *numplayers;  //not needed played around with this
+   int age[5];
+   
+   int temp = 0;
+   int size = temp;
+
+   cout <<"Enter the number of players on \nthe hockey team: " ;
+   cin>> size ;
+   cout<<"You entered " <<size <<" players." <<endl;
+   numplayers = new int[size];
+  // age = new int[age];
+  //  cout<<numplayers ;
+
+  //Get age of players.
+    for (int index = 0;index < size; index++)
+    {
+      cout<<"Enter age of hockey player # " <<(index + 1) <<" :";
+      cin >> age[index] ;
+    }
+    //now do same sort but get oldest age
+    int max = age[0];
+    for (int index = 0;index < size; index++)
+    {
+      if (age[index] > max)
+      {
+        max = age[index];
+      }
+    }
+    //print out oldest player
+    cout <<"The oldest player on the jocky team is: " <<max <<endl;
+    cin.clear();
+   return 0;
+
+}
+
+void printArray(int array[], int size)
+{
+  for (int i =0; i< size; i++)
+  {
+    cout<<array[i] <<" \t ";
+  }
+  cout<<endl;
+}
