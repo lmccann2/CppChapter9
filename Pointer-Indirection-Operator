@@ -1,0 +1,33 @@
+//************************************
+//.cpp
+//Levi McCann
+//Pointer Indirection Operator
+//CIS61 Hendrickson
+//04/08/2020
+//************************************
+
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+
+int main()
+ {
+   //int* p;   //pointer type int
+    int *q;   //pointer type int c++ doesnt care where * is after int and before name
+    string* r;
+    int x = 23;
+    int *p = &x;
+    //display contents of pointer
+    cout<<" The value of the stored variable 'x' is: " <<*p <<endl;
+
+    cout<<" This program demonstrates the \n contents of the pointer variable \n stored in '*' or variable '*p' :" <<*p <<endl;
+    cout <<" This variable is stored at memory location,\n or address: " <<&x <<endl;
+  
+ 
+ 
+ 
+ return 0;
+
+}
