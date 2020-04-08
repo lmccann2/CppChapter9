@@ -1,0 +1,81 @@
+//*******************************
+//.cpp
+//Levi McCann
+//Average number of steps in a day
+//CIS61 Hendrickson
+//04/08/2020
+//********************************
+//THis program is modifified to calculate number //of steps, and average number of steps in a day
+//********************************* 
+
+
+
+#include <string>
+#include <cmath>  
+#include <iostream>
+using namespace std;
+
+//prototype two functions
+void printArray(int array[], int size);
+
+int main()
+ {
+   const int NUMPlayers = 10;
+   int *numplayers;  //not needed played around with this
+   float age[5];
+   
+   int temp = 0;
+   int days = temp;
+  // double average = age[index] / days;
+   
+
+   cout <<"Enter the number of days \nto average your steps: " ;
+   cin>> days ;
+   cout<<"You entered " <<days <<" players." <<endl;
+   numplayers = new int[days];
+  // age = new int[age];
+  //  cout<<numplayers ;
+
+  //Get age of players.
+  //get average number of steps
+  int average = age[0] / days;
+  //get total number of steps
+  int total = 0;
+    for (int index = 0;index < days; index++)
+    {
+      cout<<"Enter number of steps for \nday # " <<(index + 1) <<" :";
+      cin >> age[index] ;
+      average = age[index] / days;
+      total = age[index]++;
+    }
+    //print total steps
+    cout<<"The total steps taken is: " <<total <<endl;
+    //declare max steps variable
+    int max = age[0];
+    for (int index = 0;index < days; index++)
+    {
+      if (age[index] > max)
+      {
+        max = age[index];
+        average = age[index] / days;
+      }
+    }
+    //print average steps
+  
+    cout<<"The average amount of steps is: " <<age[0] <<endl;
+
+    //print out oldest player
+    cout <<"The maximum amount of steps taken in a day is " <<max <<endl;
+    cin.clear();
+   return 0;
+
+}
+
+void printArray(int array[], int size)
+{
+  for (int i =0; i< size; i++)
+  {
+    cout<<array[i] <<" \t ";
+  }
+  cout<<endl;
+}
