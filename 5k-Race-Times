@@ -1,0 +1,90 @@
+//*******************************
+//.cpp
+//Levi McCann
+//5k Races
+//CIS61 Hendrickson
+//04/08/2020
+//********************************
+//THis program is modifified to calculate number //of steps, and average number of steps in a day
+//********************************* 
+//Modified again to determine Kathy's 5 K races
+//****************************************
+
+
+
+#include <string>
+#include <cmath>  
+#include <iostream>
+using namespace std;
+
+//prototype two functions
+void printArray(int array[], int size);
+
+int main()
+ {
+   const int NUMPlayers = 10;
+   int *numplayers;  //not needed played around with this
+   float age[5];  // now is for finish times
+   
+   int temp = 0;
+   int days = temp;  // number of days, or races
+  // double average = age[index] / days;
+   
+
+   cout <<"Enter the number of races \nto include in calculation: " ;
+   cin>> days ;
+   cout<<"You entered " <<days <<" players." <<endl;
+   numplayers = new int[days];
+  // age = new int[age];
+  //  cout<<numplayers ;
+
+  //Get age of players.
+  //get average number of steps
+  float average = age[0] / days;
+  //get total number of steps
+  int total = 0;
+    for (int index = 0;index < days; index++)
+    {
+      cout<<"Enter Time for Race # " <<(index + 1) <<" :";
+      cin >> age[index] ;
+      average = age[index] / days;
+      total = age[index]++;
+    }
+    //print total steps
+    cout<<"Total time: " <<total <<endl;
+    //declare max steps variable
+    float max = age[0];
+    float lowest = age[0];
+    for (int index = 0;index < days; index++)
+    {
+      if (age[index] > max)
+      {
+        max = age[index];
+        average = age[index] / days;
+      }
+      if (age[index] <= lowest)
+      {
+        lowest = age[index];
+        average = age[index] / days;
+      }
+    }
+    //print average times
+  
+    cout<<"The average race finishing time is: " <<age[0] <<endl;
+    cout <<"The lowest race finishing time is: " <<lowest <<endl;
+
+    //print out oldest player
+  //  cout <<"The race time is:  " <<max <<endl;
+    cin.clear();
+   return 0;
+
+}
+
+void printArray(int array[], int size)
+{
+  for (int i =0; i< size; i++)
+  {
+    cout<<array[i] <<" \t ";
+  }
+  cout<<endl;
+}
