@@ -1,0 +1,41 @@
+//***********************************
+//Levi McCann
+//Display Array Of Doubles
+//CIS61 Hendrickson
+//04/08/2020
+//************************************
+
+
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+
+int main()
+ {
+   double array[5] = {2.6, 4.5, 7.8, 9.9, 22.2};
+
+   cout<<"The array values are: " <<endl;
+   cout<<endl;
+   cout <<array[0] <<endl;
+   cout<< array[1] <<endl;
+   cout <<array[2] <<endl;
+   cout<< array[3] <<endl;
+   cout <<array[4] <<endl;
+   cout<<endl;
+   cout<<"End of Program" <<endl;
+   cout<<endl;
+
+   cout<<"This is another way to print the\ncontents of the Array of Doubles:" <<endl <<endl;
+   //do the printout another way
+   for (int i =0; i < 5; i++)
+    {
+      cout <<array[i] <<endl;
+    }
+    cout<<endl;
+    cout<<"End of Program" <<endl;
+
+return 0;
+
+}
