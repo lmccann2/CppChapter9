@@ -1,0 +1,31 @@
+//***********************************
+//.cpp
+//Levi McCann
+//PointerVariableAddress
+//CIS 61 Hendrickson
+//***********************************
+
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+int x = 4;
+cout <<"The value of x is : " <<x <<endl;
+cout <<"The x variable is stored at: " <<&x <<endl;
+
+//define and store a pointer PointerVariableAddres
+int *pointerVar;
+pointerVar = &x;
+
+cout<<"The pointer address for 'x' is: " <<&x <<endl;
+cout<<"The pointer address for 'pointerVar' is: " <<&pointerVar <<endl;
+cout<<"The value of 'pointerVar' is: " <<pointerVar <<endl;
+
+
+
+return 0;
+
+}
